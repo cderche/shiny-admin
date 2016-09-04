@@ -1,0 +1,12 @@
+.login_form {
+  background-color: #f7f7f7;
+  padding: 30px;
+  margin-top: 50px;
+}
+.scroll-view {
+  width: inherit;
+}
+.brand-img {
+  margin: 0 auto;
+  display: block;
+}

@@ -1,4 +1,10 @@
 extends layout
 
 block content
-  h4 Login
+  .col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+    form.login_form(method='post' action='auth')
+      .form-group
+        input.form-control(type='text' name="email" placeholder='email' required)
+      .form-group
+        input.form-control(type='password' name="password" placeholder='password' required)
+      input.btn.btn-default.btn-block(type='submit')

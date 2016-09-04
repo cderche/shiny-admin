@@ -18,18 +18,23 @@ module.exports = function(app) {
     usernameField: 'email'
   },
   function(req, email, password, done) {
+    console.log(`${email}, ${password}`);
     User.findOne({ email: email}, function(err, user) {
-      if (err)
+      if (err) {
+        console.error(err);
         return done(err)
-
+      }
       if (!user) {
+        console.error('Err: user not found');
         return done(null, false)
       }
 
       if(!user.login(password)) {
+        console.error('Err: password doesn`t match');
         return done(null, false)
       }
 
+      console.log('User identified');
       return done(null, user)
     })
   }))

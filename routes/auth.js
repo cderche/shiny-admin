@@ -14,4 +14,9 @@ module.exports = function(app) {
     return res.render('login')
   })
 
+  app.get('/logout', function(req, res) {
+    req.logout()
+    res.redirect('/login')
+  })
+
 }
