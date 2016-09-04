@@ -17135,4 +17135,8 @@ ul.notifications {
 .brand-img {
   margin: 0 auto;
   display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 10px;
+  max-width: 70px;
 }
